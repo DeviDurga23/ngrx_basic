@@ -1,0 +1,35 @@
+<p>Users works!</p>
+
+<div><button (click)="addUser()">Add user</button></div>
+
+<ng-container *ngIf="loading$ | async; else loadedContent">
+  Loading....
+</ng-container>
+
+<ng-template #loadedContent>
+  <ng-container *ngIf="user$ | async as users">
+    <table *ngIf="users.length > 0; else noUsers">
+      <thead>
+        <tr>
+          <th>USERID</th>
+          <th>ID</th>
+          <th>NAME</th>
+          <th>COMPLETED</th>
+          <th>ACTIONS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.id }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.username}}</td>
+          <td>{{ user.email }}</td>
+          <td><button (click)="removeUser(user.id)">Remove</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <ng-template #noUsers>
+      <p>No users available.</p>
+    </ng-template>
+  </ng-container>
+</ng-template>

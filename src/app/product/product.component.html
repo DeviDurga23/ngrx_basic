@@ -1,0 +1,61 @@
+<p>product works!</p><br>
+<!-- <div>
+  <h1>{{ products$ | async | json }}</h1>
+</div> -->
+<br>
+<div>
+  <button (click)="addProduct()">ADD PRODUCT</button>
+  <br><br><hr>
+
+  <ng-container *ngIf="products$ | async as products">
+    <table>
+      <thead>
+        <tr>
+          <td>ID</td>
+          <td>NAME</td>
+          <td>PRICE</td>
+          <td>ACTION</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <td>{{ product.id }}</td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.price }}</td>
+          <td>
+            <button (click)="removeProduct(product.id)">REMOVE</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </ng-container>
+</div>
+<!-- <p>product works!</p>
+<div>
+  <h1>{{  products$ |async |json}}</h1>
+</div>
+<div>
+  <button (click)="addProduct()" >ADD PRODUCT  </button>
+  
+  <ng-container *ngIf="products$ |async as products">
+    <table>
+      <thead>
+        <tr>
+          <td> ID </td>
+          <td> NAME </td>
+          <td> PRICE </td>
+          <td> ACTIONS </td>
+        </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product as products">
+            <td>{{product.id}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            
+          </tr>
+        </tbody>
+    </table>
+  <button (click)="removeProduct(product.id)"></button>
+</ng-container>
+</div> -->

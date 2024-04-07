@@ -1,0 +1,40 @@
+div {
+  /* padding: 10px; */
+  margin: 10px;
+  display: inline-block;
+  border: 1px solid #ae4c6e94; 
+  border-radius: 8px;
+  
+}
+
+* {
+  background-color: #f0e9b0ea; 
+  font-family: Arial, sans-serif;
+  
+}
+button {
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  margin: 5px;
+  cursor: pointer; 
+  transition: background-color 0.3s; 
+  background-color: brown;
+}
+
+button:hover {
+  background-color: #1b8920; 
+}
+
+
+ .container {
+  transform: translateY(190px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%; 
+  margin: auto; 
+  max-width: 30%; 
+  padding: 20px; 
+}

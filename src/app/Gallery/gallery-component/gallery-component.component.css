@@ -1,0 +1,24 @@
+.album {
+  margin-bottom: 20px;
+}
+
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.photo {
+  width: calc(33.33% - 10px);
+  margin: 0 5px 10px;
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.photo p {
+  margin-top: 5px;
+  text-align: center;
+}

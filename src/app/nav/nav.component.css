@@ -1,0 +1,28 @@
+nav {
+  position: fixed; /* Fixed positioning */
+  top: 0; /* Align to the top of the viewport */
+  width: 100%; /* Take up the full width of the viewport */
+  background-color: #333;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: center;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: #e5d7d7;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
